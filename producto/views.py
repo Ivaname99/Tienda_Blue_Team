@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from .models import Producto
 from .forms import ProductoForm
 
-# Create your views here.
+# Create your views here..
 
 def inicio(request):
     return render(request, 'pages/inicio.html')
