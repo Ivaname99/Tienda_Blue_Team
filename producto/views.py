@@ -1,8 +1,9 @@
 from django.shortcuts import redirect, render
 from .models import Producto
 from .forms import ProductoForm
+from django.contrib import messages
 
-# Create your views here..
+# Create your views here.
 
 def inicio(request):
     return render(request, 'pages/inicio.html')
@@ -16,6 +17,7 @@ def crear_producto(request):
 
     if formulario.is_valid():
         formulario.save()
+        messages.success(request,"Producto creado con exito.")
         return redirect('productos')        
 
     return render(request, 'producto/crear.html', {'formulario': formulario})
@@ -26,6 +28,7 @@ def editar_producto(request, id):
     formulario = ProductoForm(request.POST or None, instance = producto)
     if formulario.is_valid():
         formulario.save()
+        messages.success(request,"Producto actualizado con exito.")
         return redirect('productos') 
     
     return render(request, 'producto/editar.html', {'formulario': formulario})
