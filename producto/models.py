@@ -9,3 +9,9 @@ class Producto(models.Model):
     fechaProduccion = models.DateField(null=False)
     fechaCaducidad = models.DateField(null=False)
     precio = models.DecimalField(null=False, decimal_places=2, max_digits=9)
+    
+class Contacto(models.Model):
+    id = models.AutoField(primary_key=True, auto_created=True)
+    usuario = models.TextField(null=False, max_length=200)
+    email = models.TextField(null=False, max_length=200)
+    mensaje = models.TextField(null=False, max_length=200)

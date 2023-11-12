@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo%}
+<title>Michelle's Bakery</title>
+{% endblock %}
+
+{% block contenido %}
+
+    <div class="card mx-auto mb-10" style="max-width: 900px; margin: 85px; background-color: mistyrose;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="static/img/collage.jpeg" class="img-fluid rounded-start" alt="Collage">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body text-center ">
+                    <h5 class="card-title mb-4 fs-4">Acerca de Michelles Bakery</h5>
+                    <p class="card-text text-center fs-5">Michelles Bakery es un lugar especial donde la tradición se combina con la innovación. Nos enorgullece ofrecer productos de alta calidad utilizando ingredientes frescos y naturales. </p>
+                    <p class="card-text text-center fs-5">Estamos comprometidos a brindarte la mejor experiencia culinaria. ¡Ven y descubre la amplia variedad de productos que tenemos para ofrecer! Desde pasteles hasta postres, siempre encontrarás algo delicioso en Michelles Bakery. </p>
+                    <p class="card-text"><small style="color: #FF1493;" >SINCE 2019</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ {% endblock %}
